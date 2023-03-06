@@ -24,17 +24,17 @@ class Main {
 	}
 }
 class 전사 {
-	String 공격자명;
-	String 무기명;
+    String lastName;
+    String lastWeaponName;
 
-	void 공격(String 공격자명, String 무기명) {
-		this.공격자명 = 공격자명;
-		this.무기명 = 무기명;
-		
-		재공격();
-	}
+    void 공격(String name, String weaponName) {
+        System.out.println(name + "(이)가 " + weaponName + "(으)로 공격합니다.");
 
-	void 재공격() {
-		System.out.printf("%s(이)가 %s(으)로 공격합니다!\n", 공격자명, 무기명);
-	}
+        lastName = name;
+        lastWeaponName = weaponName;
+    }
+
+    void 재공격() {
+        System.out.println(lastName + "(이)가 " + lastWeaponName + "(으)로 공격합니다.");
+    }
 }
