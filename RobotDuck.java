@@ -41,14 +41,14 @@ class 오리 {
 }
 class 흰오리 extends 오리 { }
 class 청둥오리 extends 오리 { }
-class 고무오리 extends 오리 {
+// 사실은 고무오리가 로봇오리를 상속받으면 안된다.
+// 왜냐하면 A is B 테스트에 통과하지 못했기 때문이다.(고무오리가 로봇오리 아님)
+// 지금은 정답을 풀려고 억지로 한 것이다.
+class 고무오리 extends 로봇오리 {
 	void 날다() {
 		System.out.println("저는 못 날아요. ㅜㅠ");
 	}
 	
-	void 수영하다() {
-		System.out.println("오리가 물에 둥둥 떠다닙니다.");
-	}
 }
 class 고무2오리 extends 고무오리 { }
 class 로봇오리 extends 오리{
